@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails Weather Application
 
-Things you may want to cover:
+To Get Started:
 
-* Ruby version
+Type 'bundle' in the application directory, then prefix normal commands such as 'rake', 'rspec' etc. with 'bundle exec' (unless you have rvm installed)
 
-* System dependencies
+To Run Tests:
 
-* Configuration
+Type: 'rspec' for unit tests or 'cucumber' for integration tests.
 
-* Database creation
+To see the web app running :-
 
-* Database initialization
+Type 'rails server'
 
-* How to run the test suite
+=== Development Process
 
-* Services (job queues, cache servers, search engines, etc.)
+The process used to develop this app are as follows :-
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. I started off with a blank rails application configured with rvm to use ruby 2.0.0-p247 with its own gemset
+2. Added testing suite (rspec, selenium, cucumber etc..)
+3. Added an initial feature for the home page (not passing at this point)
+4. Added cucumber steps to allow cucumber to run and fail
+5. Added controller with spec and routing spec as I use rspec to unit test the lower level detail
+6. Added twitter bootstrap for styling
+7. Refactored - now using a single forecast controller
+8. Added forecast.io and geocoding gem to allow the user to give a location such as a city
+9. Added auto complete using twitter auto complete
