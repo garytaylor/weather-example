@@ -43,3 +43,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails'             #Not sure why this also needs to be in development, but this is documented in the rspec-rails project
+end
+group :test do
+  gem 'rspec-mocks'
+  gem 'cucumber-rails', :require => false
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'selenium-webdriver'
+  gem 'bogus'
+end
