@@ -8,7 +8,10 @@ module Weather
         '.widget.weekly_forecast'
       end
       def login_bar
-        '.widget.login_bar'
+        '.widget.login-bar'
+      end
+      def request_forecast_widget
+        '.request-forecast.widget'
       end
     end
   end

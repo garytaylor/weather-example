@@ -27,3 +27,7 @@ Then(/^I should see the weekly forecast for "([^"]*)"$/) do |location|
     expect(page).to have_text(location)
   end
 end
+
+Then(/^I should see the Request Forecast widget$/) do
+  expect(page).to have_selector(:css, Weather::Selectors.request_forecast_widget)
+end
