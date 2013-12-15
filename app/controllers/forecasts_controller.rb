@@ -1,5 +1,9 @@
 class ForecastsController < ApplicationController
   def new
-    @forecast = Forecast.new
+    
+  end
+  def create
+    @forecast = Forecast.request(params[:forecast])
+    debug_me = true
   end
 end

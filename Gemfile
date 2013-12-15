@@ -55,3 +55,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'bogus'
 end
+gem 'forecast_io'
+gem 'geocoder'

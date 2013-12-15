@@ -20,8 +20,11 @@ describe ForecastsController do
       mock_model 'Forecast'
     end
     it 'returns http success' do
-      post 'create', {forecast: {location: 'Derby'}}
+      post 'create', {forecast: {location: 'Derby, UK'}}
       response.should be_success
+    end
+    it 'assigns a populated forecast object' do
+      pending
     end
 
   end

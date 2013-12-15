@@ -1,7 +1,7 @@
 <div class="widget request-forecast">
-  <%= form_for forecast do |f| %>
+  <%= form_for :forecast, url: forecast_path do |f| %>
       <%= f.label :location, "Location" %>
-      <%= f.text_field :location %>
+      <%= f.text_field :location, :class => 'typeahead' %>
       <%= f.submit 'Go', :class => 'submit-forecast' %>
   <% end %>
 
