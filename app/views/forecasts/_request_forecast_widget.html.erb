@@ -1,0 +1,8 @@
+<div class="widget request-forecast">
+  <%= form_for forecast do |f| %>
+      <%= f.label :location, "Location" %>
+      <%= f.text_field :location %>
+      <%= f.submit 'Go', :class => 'submit-forecast' %>
+  <% end %>
+
+</div>
