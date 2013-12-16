@@ -5,6 +5,7 @@ Ruby on Rails Weather Application
 To Get Started:
 
 Type 'bundle' in the application directory, then prefix normal commands such as 'rake', 'rspec' etc. with 'bundle exec' (unless you have rvm installed)
+Type 'rake db:migrate'
 
 To Run Tests:
 
@@ -13,6 +14,18 @@ Type: 'rspec' for unit tests or 'cucumber' for integration tests.
 To see the web app running :-
 
 Type 'rails server'
+
+IMPORTANT NOTES:
+1. The login bar at the top of the screen is for show only - although it could be 'wired in' without too much difficulty.  When you request a weather forecast, you will see
+todays weather but the weather for the week ahead will not be available until you register.  This was just an example of how the user registration may be used.
+When you register, the system will log you in and the results will be shown.
+
+2. I am using the forecast.io service which states that the results should be shown in degrees centigrade, however they are very high, suggesting they may be in farenheit.
+I have not applied any conversion to this as if I were developing a real application, I would find out why the service is not doing what it is supposed to rather than working
+around it.
+
+3. I have developed the 'Forecast' model without any unit tests as it accesses external services.  Given a little more time, the next development task would be to use the VCR gem which
+records and plays back external HTTP requests within the specs / features.  A unit test would then be written for the forecast model.
 
 === Development Process
 
@@ -27,3 +40,4 @@ The process used to develop this app are as follows :-
 7. Refactored - now using a single forecast controller
 8. Added forecast.io and geocoding gem to allow the user to give a location such as a city
 9. Added auto complete using twitter auto complete
+10. Developed code to pass all specs and features including adding devise and cancan for access control.
