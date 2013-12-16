@@ -4,6 +4,8 @@ Ruby on Rails Weather Application
 
 To Get Started:
 
+Ideally, you should have rvm installed and ruby 2 installed.  In places I have used the new hash syntax (i.e. {key: 'value'} instead of {:key => 'value'}) so this may not work on older versions without modification
+
 Type 'bundle' in the application directory, then prefix normal commands such as 'rake', 'rspec' etc. with 'bundle exec' (unless you have rvm installed)
 Type 'rake db:migrate'
 
