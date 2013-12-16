@@ -13,7 +13,6 @@ module Weather
       def request_forecast_widget
         '.request-forecast.widget'
       end
-
     end
   end
 end

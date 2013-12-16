@@ -3,5 +3,8 @@ Given /^I am a visitor$/ do
 end
 
 When(/^I sign up via the invitation to see the weekly forecast$/) do
-  click_link_or_button :css, Weather::Selectors.weekly_forecast_sign_up_call_to_action
+  within :css, Weather::Selectors.weekly_forecast_widget_results do
+    click_link_or_button 'Register'
+  end
+  Weather::Interactions.sign_up(page)
 end

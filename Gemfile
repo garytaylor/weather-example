@@ -57,3 +57,5 @@ group :test do
 end
 gem 'forecast_io'
 gem 'geocoder'
+gem 'devise'
+gem 'cancan'

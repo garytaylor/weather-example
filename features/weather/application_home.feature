@@ -21,8 +21,7 @@ Feature: Weather Application Home Page
   Scenario: A visitor uses the home page to get the weeks forecast and is guided through the sign up process
     Given I am a visitor
     And I am on the home page
-    Then I should see the Todays Forecast widget
-    And I should see the Weekly Forecast widget
+    Then I should see the Request Forecast widget
     When I request a forecast for "Derby"
     Then I should see the daily forecast for "Derby"
     And I should see an invitation to sign up or sign in to see the weekly forecast

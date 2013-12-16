@@ -2,6 +2,7 @@
   <div class="inner">
     <div class="highlight text-center">Weekly Forecast</div>
     <div class="results">
+      <% if can? :weekly_forecast, forecast %>
       <p class="lead text-center">For <%= forecast.location %></p>
       <div class="<%= forecast.daily_icon %>"></div>
       Summary: <%= forecast.daily_summary %>
@@ -11,6 +12,13 @@
           <p><%= day_forecast.summary %></p>
           <p>Temperature: <%= day_forecast.temperatureMin %> to <%= day_forecast.temperatureMax %></p>
       <% end %>
+      <% else %>
+          <p class="lead">Weekly forecasts are available if you sign up. It's free and its quick</p>
+          <p class="text-right">
+            <a href="<%= new_user_registration_path %>" class="btn btn-success register-button">Register</a>
+          </p>
+      <% end %>
     </div>
   </div>
 </div>
+
