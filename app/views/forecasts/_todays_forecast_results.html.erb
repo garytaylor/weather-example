@@ -1,9 +1,11 @@
-<div class="widget todays_forecast">
-  <h2>Todays Forecast</h2>
-  <div class="results">
-    <h3>For <%= forecast.location %></h3>
-    <div class="<%= forecast.currently.icon %>"></div>
-    <p><%= forecast.currently.summary %></p>
-    <p>Temperature: <%= forecast.currently.temperature %></p>
+<div class="widget todays-forecast col-md-4">
+  <div class="inner">
+    <div class="highlight text-center">Todays Forecast</div>
+    <div class="results">
+      <p class="lead text-center">For <%= forecast.location %></p>
+      <div class="<%= forecast.currently.icon %>"></div>
+      <p>Summary: <%= forecast.currently.summary %></p>
+      <p>Temperature: <%= forecast.currently.temperature %></p>
+    </div>
   </div>
 </div>

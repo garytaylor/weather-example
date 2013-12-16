@@ -1,0 +1,11 @@
+.widget {
+  &.todays-forecast,&.weekly-forecast {
+    .inner {
+      border: 1px solid #ddd;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    padding: 10px;
+  }
+
+}

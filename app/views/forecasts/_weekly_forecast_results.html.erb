@@ -1,14 +1,16 @@
-<div class="widget weekly_forecast">
-  <h2>Weekly Forecast</h2>
-  <div class="results">
-    <h3>For <%= forecast.location %></h3>
-    <div class="<%= forecast.daily_icon %>"></div>
-    Summary: <%= forecast.daily_summary %>
-    <% forecast.daily.each do |day_forecast| %>
-        <h4>Day: <%= day_from_timestamp day_forecast.time %></h4>
-        <div class="<%= day_forecast.icon %>"></div>
-        <p><%= day_forecast.summary %></p>
-        <p>Temperature: <%= day_forecast.temperatureMin %> to <%= day_forecast.temperatureMax %></p>
-    <% end %>
+<div class="widget weekly-forecast col-md-8">
+  <div class="inner">
+    <div class="highlight text-center">Weekly Forecast</div>
+    <div class="results">
+      <p class="lead text-center">For <%= forecast.location %></p>
+      <div class="<%= forecast.daily_icon %>"></div>
+      Summary: <%= forecast.daily_summary %>
+      <% forecast.daily.each do |day_forecast| %>
+          <h4>Day: <%= day_from_timestamp day_forecast.time %></h4>
+          <div class="<%= day_forecast.icon %>"></div>
+          <p><%= day_forecast.summary %></p>
+          <p>Temperature: <%= day_forecast.temperatureMin %> to <%= day_forecast.temperatureMax %></p>
+      <% end %>
+    </div>
   </div>
 </div>

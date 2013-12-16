@@ -2,10 +2,10 @@ module Weather
   module Selectors
     class << self
       def todays_forecast_widget_results
-        '.widget.todays_forecast .results'
+        '.widget.todays-forecast .results'
       end
       def weekly_forecast_widget_results
-        '.widget.weekly_forecast .results'
+        '.widget.weekly-forecast .results'
       end
       def login_bar
         '.widget.login-bar'

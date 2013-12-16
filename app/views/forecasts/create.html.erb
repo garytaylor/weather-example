@@ -1,6 +1,8 @@
 <div class="container">
   <%= render partial: 'intro' %>
   <%= render partial: 'request_forecast_widget', locals: {forecast: @forecast} %>
-  <%= render partial: 'todays_forecast_results', locals: {forecast: @forecast} %>
-  <%= render partial: 'weekly_forecast_results', locals: {forecast: @forecast} %>
+  <div class="row">
+    <%= render partial: 'todays_forecast_results', locals: {forecast: @forecast} %>
+    <%= render partial: 'weekly_forecast_results', locals: {forecast: @forecast} %>
+  </div>
 </div>

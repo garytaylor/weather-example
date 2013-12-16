@@ -12,7 +12,7 @@ class Forecast
   #Requests a new forecast and returns an instance of this class
   def self.request(attributes)
     geo = ::Geocoder.search(attributes[:location]).first
-    self.new attributes[:location], ForecastIO.forecast(geo.latitude, geo.longitude)
+    self.new attributes[:location], ForecastIO.forecast(geo.latitude, geo.longitude, units: 'uk')
   end
   #Provides the daily summary text
   def daily_summary
